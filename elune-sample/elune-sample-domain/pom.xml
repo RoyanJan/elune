@@ -10,7 +10,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>elune-sample-common</artifactId>
+    <artifactId>elune-sample-domain</artifactId>
+    <packaging>pom</packaging>
 
+    <modules>
+        <module>elune-sample-domain-common</module>
+        <module>elune-sample-domain-dao</module>
+        <module>elune-sample-domain-service</module>
+        <module>elune-sample-domain-servicei</module>
+        <module>elune-sample-domain-portal</module>
+    </modules>
 
 </project>

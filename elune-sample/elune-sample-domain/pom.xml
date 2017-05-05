@@ -21,4 +21,12 @@
         <module>elune-sample-domain-portal</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.outwit</groupId>
+            <artifactId>elune-sample-base</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>

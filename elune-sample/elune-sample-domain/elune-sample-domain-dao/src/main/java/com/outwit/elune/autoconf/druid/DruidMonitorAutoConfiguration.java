@@ -17,13 +17,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
-/**
- * @ClassName: DruidMonitorAutoConfiguration
- * @Description: Druid自动配置
- * @author Kola 6089555
- * @date 2017年4月20日 上午10:40:14
- *
- */
+
 @Configuration
 @ConditionalOnClass(DruidDataSource.class)
 @EnableConfigurationProperties(DruidMonitorProperties.class)
@@ -36,11 +30,7 @@ public class DruidMonitorAutoConfiguration {
     @Autowired
     private DruidMonitorProperties properties;
     
-    /**
-     * 注册一个StatViewServlet
-     *
-     * @return ServletRegistrationBean
-     */
+
     @Bean
     public ServletRegistrationBean druidStatViewServlet() {
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet(), properties.getDruidStatView());
@@ -62,11 +52,7 @@ public class DruidMonitorAutoConfiguration {
         return servletRegistrationBean;
     }
     
-    /**
-     * 注册一个：filterRegistrationBean
-     *
-     * @return FilterRegistrationBean
-     */
+
     @Bean
     public FilterRegistrationBean druidStatFilter() {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new WebStatFilter());

@@ -9,12 +9,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @author Kola 6089555
- * @ClassName: DruidAutoConfiguration
- * @Description: Druid自动配置
- * @date 2017年4月20日 上午10:43:23
- */
 @Configuration
 @ConditionalOnClass(DruidDataSource.class)
 @ConditionalOnMissingBean(name = "dataSource")
@@ -22,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 public class DruidAutoConfiguration {
 
     @Bean(name = "druidDataSource", initMethod = "init", destroyMethod = "close")
-    @ConfigurationProperties(prefix = "druid.dataSource")
+    @ConfigurationProperties(prefix = "druid")
     public DruidDataSource druidDataSource() {
         return new DruidDataSource();
     }

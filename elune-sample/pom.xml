@@ -22,6 +22,7 @@
         <module>elune-sample-bom</module>
         <module>elune-sample-base</module>
         <module>elune-sample-domain</module>
+        <module>elune-sample-monitor</module>
     </modules>
 
 

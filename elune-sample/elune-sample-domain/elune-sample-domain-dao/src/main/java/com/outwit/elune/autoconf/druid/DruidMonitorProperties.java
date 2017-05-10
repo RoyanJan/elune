@@ -2,13 +2,7 @@ package com.outwit.elune.autoconf.druid;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-/**
- * @ClassName: DruidMonitorProperties
- * @Description: DruidMonitor配置
- * @author Kola 6089555
- * @date 2017年4月20日 上午10:38:57
- *
- */
+
 @ConfigurationProperties(prefix = "druid.monitor")
 public class DruidMonitorProperties {
     

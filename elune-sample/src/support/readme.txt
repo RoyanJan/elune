@@ -16,11 +16,11 @@
 |
 --- COMMON
 |
---- DAO
+--- DAO ( mybatis | pagehelper | druid | druid-monitor )
 |
 --- SERVICEI
 |
---- SERVICE
+--- SERVICE ( dubbo | pack | profile)
 |
 --- BATCH
 |

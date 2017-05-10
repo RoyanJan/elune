@@ -2,9 +2,20 @@ spring:
   boot:
     admin:
       url: http://localhost:8081
+      client:
+        enabled: false
   application:
     name: elune-sample-service
     index: ${random.uuid}
+  dubbo:
+    application:
+      name: elune-sample-service-provider
+    registry:
+      address: zookeeper://localhost:2181
+    protocol:
+      name: dubbo
+      port: 20880
+    scan: com.outwit.elune.service
 
 server:
   port: 8080
@@ -32,7 +43,7 @@ druid:
     filters: stat,wall,log4j,config
     connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=false
     monitor:
-          enabled: enabled # 配置此属性Monitor才生效
+          enabled: enabled
           druid-stat-view: /druid/*
           druid-web-stat-filter: /*
           allow: 172.20.10.2
@@ -41,5 +52,15 @@ druid:
           login-password: druid
           exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
           reset-enable: false
+mybatis:
+  mapper-locations: classpath*:META-INF/mybatis/mapper/*.xml
+  type-aliases-package: com.outwit.elune.dao.domain
+  type-handlers-package: com.outwit.elune.dao.handler
+
+pagehelper:
+  helper-dialect: mysql
+
+
+
 
 

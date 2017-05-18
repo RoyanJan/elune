@@ -1,12 +1,12 @@
 spring:
+  application:
+    name: elune-sample-service
+    index: ${random.uuid}
   boot:
     admin:
       url: http://localhost:8081
       client:
         enabled: false
-  application:
-    name: elune-sample-service
-    index: ${random.uuid}
   dubbo:
     application:
       name: elune-sample-service-provider
@@ -18,7 +18,7 @@ spring:
     scan: com.outwit.elune.service
 
 server:
-  port: 8080
+  port: 8088
 management:
   security:
     enabled: false

@@ -38,6 +38,11 @@
             <artifactId>spring-boot-admin-starter-client</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.outwit</groupId>
+            <artifactId>elune-sample-domain-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.jolokia</groupId>
             <artifactId>jolokia-core</artifactId>
         </dependency>

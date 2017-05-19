@@ -8,7 +8,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>elune-sample-domain-portal</artifactId>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -28,9 +28,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.outwit</groupId>
+            <artifactId>elune-sample-domain-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>

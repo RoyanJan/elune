@@ -13,6 +13,8 @@ spring:
     registry:
       address: zookeeper://localhost:2181
     scan: com.outwit.elune.portal
+server:
+  port: 8080
 management:
   security:
     enabled: false

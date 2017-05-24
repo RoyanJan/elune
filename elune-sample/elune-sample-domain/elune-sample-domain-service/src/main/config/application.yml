@@ -6,7 +6,7 @@ spring:
     admin:
       url: http://localhost:8081
       client:
-        enabled: false
+        enabled: true
   dubbo:
     application:
       name: elune-sample-service-provider

@@ -1,20 +1,21 @@
 spring:
   application:
-    name: elune-sample-portal
-    index: ${random.uuid}
+    name: elune-sample-domain-portal-${random.value}
   boot:
     admin:
       url: http://localhost:8081
       client:
-        enabled: false
+        enabled: true
+        service-url: http://localhost:8080/elune-sample-domain-portal
   dubbo:
     application:
       name: elune-sample-service-consumer
     registry:
       address: zookeeper://localhost:2181
     scan: com.outwit.elune.portal
-server:
-  port: 8080
+  aop:
+    proxy-target-class: true
+    auto: true
 management:
   security:
     enabled: false

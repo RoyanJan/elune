@@ -40,6 +40,10 @@
             <artifactId>spring-boot-admin-starter-client</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.github.jessyZu</groupId>
+            <artifactId>dubbo-zipkin-spring-starter</artifactId>
+        </dependency>
+        <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
         </dependency>

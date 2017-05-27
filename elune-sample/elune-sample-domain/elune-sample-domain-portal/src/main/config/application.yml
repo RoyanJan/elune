@@ -5,7 +5,7 @@ spring:
     admin:
       url: http://localhost:8081
       client:
-        enabled: true
+        enabled: false
         service-url: http://localhost:8080/elune-sample-domain-portal
   dubbo:
     application:
@@ -13,6 +13,8 @@ spring:
     registry:
       address: zookeeper://localhost:2181
     scan: com.outwit.elune.portal
+    consumer:
+      filter: spanConsumer
   aop:
     proxy-target-class: true
     auto: true
